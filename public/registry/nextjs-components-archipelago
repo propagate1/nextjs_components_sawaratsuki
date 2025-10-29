@@ -1,0 +1,12 @@
+{
+  "name": "black-space",
+  "type": "registry:ui",
+  "description": "黒背景のスペーサーコンポーネント",
+  "files": [
+    {
+      "path": "ui/BlackSpace.tsx",
+      "content": "'use client';\n\nexport default function WhiteSpace01() {\n  return (\n    <section\n      className={`w-full bg-black h-[300px] max-[480px]:h-[200px]`}\n    />\n  );\n}",
+      "type": "registry:ui"
+    }
+  ]
+}
