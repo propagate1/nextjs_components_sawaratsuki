@@ -163,15 +163,15 @@ export default function Hero4000() {
 
           {/* テキスト */}
           <div className="pointer-events-none absolute inset-0">
-            <div className="mx-auto h-full px-5">
-              <div className="absolute left-5 right-5 bottom-[-22px] text-white">
+            <div className="mx-auto h-full">
+              <div className="absolute left-[30px] right-5 bottom-[-22px] text-white">
                 {/* 見出し */}
                 <h1
                   className="
                   font-extrabold leading-[1.1]
                   text-[12.5vw] tracking-[-0.01em]
                   [font-feature-settings:'palt']
-                  -skew-x-6
+                  -skew-x-12
                 "
                 >
                   企業に、絆を。
@@ -180,9 +180,8 @@ export default function Hero4000() {
                 {/* サマリ */}
                 <p
                   className="
-                  mt-3 text-[13px] leading-[1.8] text-white/95 font-medium
-                  -skew-x-6
-                  w-[70%]
+                  mt-3 text-[12px] leading-[1.8] text-white/95 font-medium
+                  w-[68%]
                   my-6
                 "
                 >
@@ -192,29 +191,33 @@ export default function Hero4000() {
                 </p>
 
                 {/* CTA */}
-                <div className="pointer-events-auto mt-4 grid grid-cols-2 gap-3">
+                <div className="pointer-events-auto mt-4 grid grid-cols-2 gap-3 tracking-[0.1em]">
                   <a
                     href="#"
                     className="
-                    inline-flex h-[56px] items-center justify-center
-                    rounded-[6px] bg-white text-[14px] font-bold text-[#111]
-                    px-5
-                    py-3
+                    inline-flex items-center justify-center
+                    rounded-[10px] bg-white text-[14px] font-bold text-[#111]
+                    pl-[28px]
+                    pr-[12px]
+                    py-[21px]
+                    w-[172px]
                     shadow-[0_1px_2px_rgba(0,0,0,.12)]
                     active:translate-y-[1px] transition
                   "
                   >
                     <span>資料請求する</span>
-                    <span className="ml-auto inline-block h-2 w-2 rotate-[-45deg] border-b-2 border-r-2 border-current" />
+                    <span className="ml-auto inline-block h-2 w-2 border-[#e60012] rotate-[-45deg] border-b-2 border-r-2" />
                   </a>
 
                   <a
                     href="#"
                     className="
-                    inline-flex h-[56px] items-center justify-center
-                    rounded-[6px] bg-[#e60012] text-[14px] font-semibold text-white
-                    px-5
-                    py-3
+                    inline-flex items-center justify-center
+                    rounded-[10px] bg-[#e60012] text-[14px] font-semibold text-white
+                    pl-[28px]
+                    pr-[12px]
+                    py-[21px]
+                    w-[172px]
                     shadow-[0_1px_2px_rgba(0,0,0,.12)]
                     active:translate-y-[1px] transition
                   "

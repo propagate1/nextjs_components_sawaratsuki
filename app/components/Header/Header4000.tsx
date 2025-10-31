@@ -32,18 +32,24 @@ export default function Header4000() {
         ${sticky ? "shadow-[0_2px_12px_rgba(0,0,0,.15)]" : ""}`}
       >
         {/* PC側のHeader */}
-        <div className="mx-auto w-full lg:flex justify-between mt-2 pr-5 hidden ">
-          <Link href="/" className="shrink-0 flex items-center">
+        <div
+          className="relative overflow-hidden group mx-auto w-full lg:flex justify-between pt-2 pr-5 hidden
+                 before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r
+                 before:from-[#001c7b] before:via-[#005ac8] before:to-[#00a7e1]
+                 before:opacity-0 before:transition-opacity before:duration-300 hover:before:opacity-100
+                 before:pointer-events-none"
+        >
+          {" "}
+          <Link href="/" className="shrink-0 flex items-center z-[100]">
             <Image
-              src="/img/Header4000_Logo_1.svg"
+              src="/img/Header4000_Logo_1.png"
               alt="JTB 法人サービスサイト"
-              width={88}
-              height={36}
+              width={100}
+              height={50}
               priority
-              className="select-none"
+              className="select-none h-auto w-full ml-7"
             />
           </Link>
-
           <div>
             <div className=" flex justify-end">
               <div className=" flex items-center gap-4 justify-between">
@@ -52,7 +58,7 @@ export default function Header4000() {
                   <li>
                     <Link
                       href={"#"}
-                      className="text-[12px] text-black bg-white hover:text-white transition
+                      className="text-[12px] text-black bg-white
                                border border-white rounded-full px-[13px] py-[4px] leading-none
                                backdrop-blur-[1px]"
                     >
@@ -62,9 +68,11 @@ export default function Header4000() {
                   <li>
                     <Link
                       href={"#"}
-                      className="text-[12px] text-white hover:text-white transition
+                      className="text-[12px] text-white transition
                                border border-white rounded-full px-[12px] py-[4px] leading-none
-                               backdrop-blur-[1px]"
+                               backdrop-blur-[1px]
+                               hover:bg-white hover:text-[#001C7B] transition
+                               "
                     >
                       自治体・行政機関向け
                     </Link>
@@ -72,9 +80,11 @@ export default function Header4000() {
                   <li>
                     <Link
                       href={"#"}
-                      className="text-[12px] text-white hover:text-white transition
-                               border border-white rounded-full px-[12px] py-[4px] leading-none
-                               backdrop-blur-[1px]"
+                      className="text-[12px] text-white transition
+                              border border-white rounded-full px-[12px] py-[4px] leading-none
+                              backdrop-blur-[1px]
+                              hover:bg-white hover:text-[#001C7B] transition
+"
                     >
                       学校・教育機関向け
                     </Link>
@@ -84,13 +94,13 @@ export default function Header4000() {
                   <li className={`${"mr-[20px]"}`}>
                     <Link
                       href={"#"}
-                      className="text-[12px] text-white hover:text-white transition
-                                py-1 leading-none
-                               backdrop-blur-[1px]
-                               text-left
-                               leading-[1.15]
-                               inline-block
-                               "
+                      className="relative inline-block text-[12px] text-white hover:text-white transition
+                      py-1 leading-none backdrop-blur-[1px] text-left leading-[1.15]
+                      after:content-[''] after:absolute after:left-0 after:-bottom-[1px]
+                      after:h-[1px] after:w-full after:bg-[currentColor]
+                      after:transition-transform after:duration-300
+                      after:scale-x-0 after:origin-right
+                      hover:after:origin-left hover:after:scale-x-100"
                     >
                       よくあるご質問
                     </Link>
@@ -98,13 +108,13 @@ export default function Header4000() {
                   <li className={`${"mr-[20px]"}`}>
                     <Link
                       href={"#"}
-                      className="text-[12px] text-white hover:text-white transition
-                                py-1 leading-none
-                               backdrop-blur-[1px]
-                               text-left
-                               leading-[1.15]
-                               inline-block
-                               "
+                      className="relative inline-block text-[12px] text-white hover:text-white transition
+                      py-1 leading-none backdrop-blur-[1px] text-left leading-[1.15]
+                      after:content-[''] after:absolute after:left-0 after:-bottom-[1px]
+                      after:h-[1px] after:w-full after:bg-[currentColor]
+                      after:transition-transform after:duration-300
+                      after:scale-x-0 after:origin-right
+                      hover:after:origin-left hover:after:scale-x-100"
                     >
                       メルマガ登録
                     </Link>
@@ -112,13 +122,13 @@ export default function Header4000() {
                   <li className={`${"mr-[20px]"}`}>
                     <Link
                       href={"#"}
-                      className="text-[12px] text-white hover:text-white transition
-                                py-1 leading-none
-                               backdrop-blur-[1px]
-                               text-left
-                               leading-[1.15]
-                               inline-block
-                               "
+                      className="relative inline-block text-[12px] text-white hover:text-white transition
+                      py-1 leading-none backdrop-blur-[1px] text-left leading-[1.15]
+                      after:content-[''] after:absolute after:left-0 after:-bottom-[1px]
+                      after:h-[1px] after:w-full after:bg-[currentColor]
+                      after:transition-transform after:duration-300
+                      after:scale-x-0 after:origin-right
+                      hover:after:origin-left hover:after:scale-x-100"
                     >
                       店舗一覧
                     </Link>
@@ -128,9 +138,13 @@ export default function Header4000() {
                   >
                     <Link
                       href="#"
-                      className={
-                        "text-[12px] text-white hover:text-white transition py-1 leading-none backdrop-blur-[1px] text-left leading-[1.15] inline-block "
-                      }
+                      className="relative inline-block text-[12px] text-white hover:text-white transition
+                      py-1 leading-none backdrop-blur-[1px] text-left leading-[1.15]
+                      after:content-[''] after:absolute after:left-0 after:-bottom-[1px]
+                      after:h-[1px] after:w-full after:bg-[currentColor]
+                      after:transition-transform after:duration-300
+                      after:scale-x-0 after:origin-right
+                      hover:after:origin-left hover:after:scale-x-100"
                     >
                       <span className="flex middle items-center">
                         個人旅行はこちら
@@ -147,9 +161,13 @@ export default function Header4000() {
                   </li>
                   <Link
                     href="#"
-                    className={
-                      "text-[12px] text-white hover:text-white transition py-1 leading-none backdrop-blur-[1px] text-left leading-[1.15] inline-block "
-                    }
+                    className="relative inline-block text-[12px] text-white hover:text-white transition
+                      py-1 leading-none backdrop-blur-[1px] text-left leading-[1.15]
+                      after:content-[''] after:absolute after:left-0 after:-bottom-[1px]
+                      after:h-[1px] after:w-full after:bg-[currentColor]
+                      after:transition-transform after:duration-300
+                      after:scale-x-0 after:origin-right
+                      hover:after:origin-left hover:after:scale-x-100"
                   >
                     <span className="flex middle items-center">
                       For overseas
@@ -170,7 +188,7 @@ export default function Header4000() {
             </div>
 
             {/* 下段 */}
-            <div className="">
+            <div className="z-100">
               <div className="mx-auto w-full px-4 ">
                 <div className="my-3 flex items-center justify-end">
                   <nav className="hidden lg:flex">
@@ -230,10 +248,18 @@ export default function Header4000() {
                           WEBマガジン
                         </Link>
                       </li>
-                      <li>
+                      <li
+                        className="relative inline-block text-[12px] text-white hover:text-white transition
+                      py-1 leading-none backdrop-blur-[1px] text-left leading-[1.15]
+                      after:content-[''] after:absolute after:left-0 after:-bottom-[1px]
+                      after:h-[1px] after:w-full after:bg-[currentColor]
+                      after:transition-transform after:duration-300
+                      after:scale-x-0 after:origin-right
+                      hover:after:origin-left hover:after:scale-x-100 z-100"
+                      >
                         <button
                           aria-label="検索"
-                          className="w-9 h-9 border-white/60 grid place-content-center hover:bg-white/10 transition"
+                          className="w-9 h-9 border-white/60 grid place-content-center transition"
                         >
                           <svg
                             viewBox="0 0 24 24"
@@ -252,12 +278,12 @@ export default function Header4000() {
                         </button>
                       </li>
                       {/* 右上（PC） */}
-                      <div className="ml-auto hidden md:flex items-center gap-3">
+                      <div className="ml-auto hidden md:flex items-center gap-3 z-100">
                         <Link
                           href="#"
                           className="h-[44px] inline-flex items-center justify-center
                             border border-white/85 text-[14px] font-semibold w-[144px]
-                           text-white hover:bg-white hover:text-[#0c2f86] transition"
+                           text-white "
                         >
                           お役立ち資料
                         </Link>
@@ -265,7 +291,9 @@ export default function Header4000() {
                           href="#"
                           className="h-[44px] inline-flex items-center justify-center
                             bg-[#cc0000] text-white text-[14px] font-semibold w-[144px]
-                           hover:opacity-90 transition"
+                           hover:opacity-90 transition
+                           hover:bg-white hover:text-[#cc0000]
+                           "
                         >
                           お問い合わせ
                         </Link>
@@ -280,9 +308,18 @@ export default function Header4000() {
         {/* モバイルメニュー（ドロワー） */}
         <div
           ref={mobileBarRef}
-          className="md:hidden flex items-center gap-4 w-full justify-between bg-gradient-to-r from-[#001c7b] via-[#005ac8] to-[#00a7e1] z-[1400]"
+          className="md:hidden flex items-center gap-4 w-full justify-between bg-gradient-to-r from-[#001c7b] via-[#005ac8] to-[#00a7e1] z-[1400] h-[67px]"
         >
-          <Link href="/" className="shrink-0 flex items-center"></Link>
+          <Link href="/" className="shrink-0 flex items-center">
+            <Image
+              src="/img/Header4000_Logo_1.png"
+              alt="JTB 法人サービスサイト"
+              width={100}
+              height={50}
+              priority
+              className="select-none h-auto w-full"
+            />
+          </Link>
           <div className="icons flex p-4">
             <Link href="#" aria-label="メール" className="p-1 px-2">
               <Image
@@ -306,19 +343,19 @@ export default function Header4000() {
               aria-label={open ? "メニューを閉じる" : "メニューを開く"}
               aria-expanded={open}
               onClick={() => setOpen((v) => !v)}
-              className="relative h-10 w-20 hover:bg-white/10"
+              className="relative hover:bg-white/10"
             >
               <span className="sr-only">{open ? "閉じる" : "メニュー"}</span>
               {!open ? (
                 <>
-                  <span className="absolute left-1/2 my-1 top-1/2 block h-[2px] w-12 -translate-x-1/2 -translate-y-2 bg-white" />
-                  <span className="absolute left-1/2 my-1 top-1/2 block h-[2px] w-12 -translate-x-1/2 bg-white" />
-                  <span className="absolute left-1/2 my-1 top-1/2 block h-[2px] w-12 -translate-x-1/2 translate-y-2 bg-white" />
+                  <span className="relative left-1/2 top-0 block h-[2px] w-12 -translate-x-1/2 -translate-y-2 bg-white" />
+                  <span className="relative left-1/2 top-[calc(50% - 1px)] block h-[2px] w-12 -translate-x-1/2 bg-white" />
+                  <span className="relative left-1/2 bottom-0 block h-[2px] w-12 -translate-x-1/2 translate-y-2 bg-white" />
                 </>
               ) : (
                 <>
-                  <span className="absolute left-1/2 top-1/2 block h-[2px] w-7 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-white" />
-                  <span className="absolute left-1/2 top-1/2 block h-[2px] w-7 -translate-x-1/2 -translate-y-1/2 -rotate-45 bg-white" />
+                  <span className="relative left-1/2 top-0 block h-[2px] w-12 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-white" />
+                  <span className="relative left-1/2 top-[-2px] block h-[2px] w-12 -translate-x-1/2 -translate-y-1/2 -rotate-45 bg-white" />
                 </>
               )}
             </button>
@@ -343,11 +380,7 @@ export default function Header4000() {
             className={`
       absolute inset-0 bg-black/40
       transition-opacity duration-200
-      ${
-        open
-          ? "pointer-events-auto"
-          : "pointer-events-none"
-      }
+      ${open ? "pointer-events-auto" : "pointer-events-none"}
     `}
           />
           <aside
