@@ -66,7 +66,7 @@ export default function Hero4000() {
           </div>
         </div>
 
-        {/* テキスト */}
+        {/* テキスト*/}
         <div className="absolute inset-0">
           <div className="mx-auto max-w-[1200px] h-full px-3 md:px-8">
             <div
@@ -87,7 +87,7 @@ export default function Hero4000() {
               </h1>
 
               <p
-                className="mt-4 text-[15px] md:text-[14px] text-white/95 ml-15 mt-[30px] font-semibold transform-[skewX(-12deg)]
+                className="text-[15px] md:text-[14px] text-white/95 mt-[30px] font-semibold -skew-x-[12deg] ml-[15px] 
 "
               >
                 企業・団体のお客様の様々な課題やニーズに対し、
@@ -95,6 +95,7 @@ export default function Hero4000() {
                 JTBだからこそ提供できるサービスについてご紹介します。
               </p>
 
+              {/* CTA */}
               <div className="mt-7 flex flex-col sm:flex-row gap-3">
                 <a
                   href="#"
@@ -124,6 +125,104 @@ export default function Hero4000() {
                 >
                   まずは相談する
                 </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        aria-label="メインビジュアル（SP）"
+        className="block lg:hidden w-full overflow-x-clip"
+      >
+        <div
+          className="
+          relative w-full
+          bg-gradient-to-br from-[#001c7b] via-[#005ac8] to-[#00a7e1]
+          h-[130vw] max-h-[690px]
+          "
+        >
+          <div
+            className="
+            relative w-full h-full overflow-hidden
+            [mask-repeat:no-repeat] [mask-position:100%_0%] [mask-size:cover]
+            md:[mask-image:url('/img/Hero4000_BackgroundMask_1.svg')]
+            max-md:[mask-image:url('/img/Hero4000_BackgroundMaskSp_1.svg')]
+
+          "
+          >
+            <Image
+              src="/img/Hero4000_Background_1.jpg"
+              alt=""
+              priority
+              fill
+              sizes="100vw"
+              className="object-cover object-center"
+            />
+          </div>
+
+          {/* テキスト */}
+          <div className="pointer-events-none absolute inset-0">
+            <div className="mx-auto h-full px-5">
+              <div className="absolute left-5 right-5 bottom-[-22px] text-white">
+                {/* 見出し */}
+                <h1
+                  className="
+                  font-extrabold leading-[1.1]
+                  text-[12.5vw] tracking-[-0.01em]
+                  [font-feature-settings:'palt']
+                  -skew-x-6
+                "
+                >
+                  企業に、絆を。
+                </h1>
+
+                {/* サマリ */}
+                <p
+                  className="
+                  mt-3 text-[13px] leading-[1.8] text-white/95 font-medium
+                  -skew-x-6
+                  w-[70%]
+                  my-6
+                "
+                >
+                  企業・団体のお客様の様々な課題やニーズに対し、
+                  
+                  JTBだからこそ提供できるサービスについてご紹介します。
+                </p>
+
+                {/* CTA */}
+                <div className="pointer-events-auto mt-4 grid grid-cols-2 gap-3">
+                  <a
+                    href="#"
+                    className="
+                    inline-flex h-[56px] items-center justify-center
+                    rounded-[6px] bg-white text-[14px] font-bold text-[#111]
+                    px-5
+                    py-3
+                    shadow-[0_1px_2px_rgba(0,0,0,.12)]
+                    active:translate-y-[1px] transition
+                  "
+                  >
+                    <span>資料請求する</span>
+                    <span className="ml-auto inline-block h-2 w-2 rotate-[-45deg] border-b-2 border-r-2 border-current" />
+                  </a>
+
+                  <a
+                    href="#"
+                    className="
+                    inline-flex h-[56px] items-center justify-center
+                    rounded-[6px] bg-[#e60012] text-[14px] font-semibold text-white
+                    px-5
+                    py-3
+                    shadow-[0_1px_2px_rgba(0,0,0,.12)]
+                    active:translate-y-[1px] transition
+                  "
+                  >
+                    <span>まずは相談する</span>
+                    <span className="ml-auto inline-block h-2 w-2 rotate-[-45deg] border-b-2 border-r-2 border-white" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>

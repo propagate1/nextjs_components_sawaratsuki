@@ -6,13 +6,24 @@ import { useEffect, useState, useRef } from "react";
 
 export default function Header4000() {
   const [sticky, setSticky] = useState(false);
+  const [open, setOpen] = useState(false);
+  const mobileBarRef = useRef<HTMLDivElement>(null);
+  const [barH, setBarH] = useState(56);
   useEffect(() => {
     const onScroll = () => setSticky(window.scrollY > 0);
     onScroll();
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
+  useEffect(() => {
+    const measure = () => setBarH(mobileBarRef.current?.offsetHeight ?? 56);
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, []);
+  useEffect(() => {
+    document.documentElement.style.setProperty("--mobile-bar-h", barH + "px");
+  }, [barH]);
   return (
     <>
       {/* 背景 */}
@@ -36,6 +47,7 @@ export default function Header4000() {
           <div>
             <div className=" flex justify-end">
               <div className=" flex items-center gap-4 justify-between">
+                {/* 上段（PC） */}
                 <ul className="hidden xl:flex items-center gap-3 mr-[26px]">
                   <li>
                     <Link
@@ -239,6 +251,7 @@ export default function Header4000() {
                           </svg>
                         </button>
                       </li>
+                      {/* 右上（PC） */}
                       <div className="ml-auto hidden md:flex items-center gap-3">
                         <Link
                           href="#"
@@ -263,6 +276,328 @@ export default function Header4000() {
               </div>
             </div>
           </div>
+        </div>
+        {/* モバイルメニュー（ドロワー） */}
+        <div
+          ref={mobileBarRef}
+          className="md:hidden flex items-center gap-4 w-full justify-between bg-gradient-to-r from-[#001c7b] via-[#005ac8] to-[#00a7e1] z-[1400]"
+        >
+          <Link href="/" className="shrink-0 flex items-center"></Link>
+          <div className="icons flex p-4">
+            <Link href="#" aria-label="メール" className="p-1 px-2">
+              <Image
+                src="/img/Header4000_Icon_2.svg"
+                alt=""
+                width={40}
+                height={40}
+                className=""
+              />
+            </Link>
+            <Link href="#" aria-label="検索" className="p-1 px-2">
+              <Image
+                src="/img/Header4000_Icon_3.svg"
+                alt=""
+                width={40}
+                height={40}
+                className=""
+              />
+            </Link>
+            <button
+              aria-label={open ? "メニューを閉じる" : "メニューを開く"}
+              aria-expanded={open}
+              onClick={() => setOpen((v) => !v)}
+              className="relative h-10 w-20 hover:bg-white/10"
+            >
+              <span className="sr-only">{open ? "閉じる" : "メニュー"}</span>
+              {!open ? (
+                <>
+                  <span className="absolute left-1/2 my-1 top-1/2 block h-[2px] w-12 -translate-x-1/2 -translate-y-2 bg-white" />
+                  <span className="absolute left-1/2 my-1 top-1/2 block h-[2px] w-12 -translate-x-1/2 bg-white" />
+                  <span className="absolute left-1/2 my-1 top-1/2 block h-[2px] w-12 -translate-x-1/2 translate-y-2 bg-white" />
+                </>
+              ) : (
+                <>
+                  <span className="absolute left-1/2 top-1/2 block h-[2px] w-7 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-white" />
+                  <span className="absolute left-1/2 top-1/2 block h-[2px] w-7 -translate-x-1/2 -translate-y-1/2 -rotate-45 bg-white" />
+                </>
+              )}
+            </button>
+          </div>
+        </div>
+
+        <div
+          aria-hidden={!open}
+          className={`
+    fixed left-0 right-0 z-[120]
+    top-[var(--mobile-bar-h)]
+    overflow-hidden
+    transition-[height] duration-300 ease-out
+    ${open ? "h-[calc(100vh-var(--mobile-bar-h))]" : "h-0"}
+  `}
+        >
+          {" "}
+          {/* 背景オーバーレイ */}
+          <button
+            aria-label="メニューを閉じる"
+            onClick={() => setOpen(false)}
+            className={`
+      absolute inset-0 bg-black/40
+      transition-opacity duration-200
+      ${
+        open
+          ? "pointer-events-auto"
+          : "pointer-events-none"
+      }
+    `}
+          />
+          <aside
+            role="dialog"
+            aria-modal="true"
+            className={`
+      absolute inset-0 bg-white text-[#0c2f86]
+      shadow-[0_8px_24px_rgba(0,0,0,.2)]
+      flex flex-col
+      h-full
+      transition-opacity duration-200 ease-out
+    `}
+          >
+            {/* 本文 */}
+            <div className="flex-1 overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] w-[calc(100%-10px)] mx-auto">
+              <nav className="px-3 py-4">
+                <div className="rounded-[4px] bg-gradient-to-r from-[#0a318e] via-[#0c3ba6] to-[#0c77d6] px-4 py-[15px] text-white text-[14px] font-bold mb-2">
+                  企業・団体向け
+                </div>
+
+                {/* メインリスト */}
+                <ul className="bg-white rounded-[8px] overflow-hidden mb-3">
+                  <li className="">
+                    <Link
+                      href={"#"}
+                      className="
+                        flex items-center justify-between
+                        px-4 py-2 text-[13px] text-black font-semibold
+                        hover:bg-[#f4f7ff]
+                      "
+                    >
+                      サービス
+                      <span className="ml-4 inline-block h-1.5 w-1.5 rotate-[315deg] border-r-2 border-b-2 border-current" />
+                    </Link>
+                  </li>
+                  <li className="flex items-center">
+                    <Link
+                      href={"#"}
+                      className="
+                        flex items-center justify-between
+                        px-4 py-4 text-[13px] text-black font-semibold
+                        hover:bg-[#f4f7ff]
+                        w-full
+                      "
+                    >
+                      サービス・ソリューションから探す
+                      <span className="ml-4 inline-block h-1.5 w-1.5 rotate-[315deg] border-r-2 border-b-2 border-current" />
+                    </Link>
+                    <Link href="#" aria-label="探す" className="p-1 px-2">
+                      <Image
+                        src="/img/Header4000_Icon_4.svg"
+                        alt=""
+                        width={20}
+                        height={20}
+                        className=""
+                      />
+                    </Link>
+                  </li>
+                  <li className="flex items-center">
+                    <Link
+                      href={"#"}
+                      className="
+                        flex items-center justify-between
+                        px-4 py-3 text-[13px] text-black font-semibold
+                        hover:bg-[#f4f7ff]
+                        w-full
+                      "
+                    >
+                      課題・目的から探す
+                      <span className="ml-4 inline-block h-1.5 w-1.5 rotate-[315deg] border-r-2 border-b-2 border-current" />
+                    </Link>
+                    <Link href="#" aria-label="探す" className="p-1 px-2">
+                      <Image
+                        src="/img/Header4000_Icon_4.svg"
+                        alt=""
+                        width={20}
+                        height={20}
+                        className=""
+                      />
+                    </Link>
+                  </li>
+                  <li className="">
+                    <Link
+                      href={"#"}
+                      className="
+                        flex items-center justify-between
+                        px-4 py-3 text-[13px] text-black font-semibold
+                        hover:bg-[#f4f7ff]
+                      "
+                    >
+                      事例
+                      <span className="ml-4 inline-block h-1.5 w-1.5 rotate-[315deg] border-r-2 border-b-2 border-current" />
+                    </Link>
+                  </li>
+                  <li className="">
+                    <Link
+                      href={"#"}
+                      className="
+                        flex items-center justify-between
+                        px-4 py-3 text-[13px] text-black font-semibold
+                        hover:bg-[#f4f7ff]
+                      "
+                    >
+                      イベント・セミナー
+                      <span className="ml-4 inline-block h-1.5 w-1.5 rotate-[315deg] border-r-2 border-b-2 border-current" />
+                    </Link>
+                  </li>
+                  <li className="">
+                    <Link
+                      href={"#"}
+                      className="
+                        flex items-center justify-between
+                        px-4 py-3 text-[13px] text-black font-semibold
+                        hover:bg-[#f4f7ff]
+                      "
+                    >
+                      WEBマガジン
+                      <span className="ml-4 inline-block h-1.5 w-1.5 rotate-[315deg] border-r-2 border-b-2 border-current" />
+                    </Link>
+                  </li>
+                  <li className="">
+                    <Link
+                      href={"#"}
+                      className="
+                        flex items-center justify-between
+                        px-4 py-3 text-[13px] text-black font-semibold
+                        hover:bg-[#f4f7ff]
+                      "
+                    >
+                      お知らせ
+                      <span className="ml-4 inline-block h-1.5 w-1.5 rotate-[315deg] border-r-2 border-b-2 border-current" />
+                    </Link>
+                  </li>
+                  <li className="">
+                    <Link
+                      href={"#"}
+                      className="
+                        flex items-center justify-between
+                        px-4 py-3 text-[13px] text-black font-semibold
+                        hover:bg-[#f4f7ff]
+                      "
+                    >
+                      資料ダウンロード
+                      <span className="ml-4 inline-block h-1.5 w-1.5 rotate-[315deg] border-r-2 border-b-2 border-current" />
+                    </Link>
+                  </li>
+                </ul>
+
+                {/* グラデブロック（自治体/学校） */}
+                <div className="space-y-0.5 mb-3">
+                  <div className="flex items-center">
+                    <button
+                      type="button"
+                      className="w-full rounded-[4px] px-4 py-4 text-left text-white text-[15px] font-bold flex justify-between items-center font-black
+                      bg-gradient-to-r from-[#0b7a2f] to-[#9bcf24]"
+                    >
+                      <span>自治体・行政機関向け</span>
+                      <span className="float-right mt-1 inline-block h-1.5 w-1.5 rotate-[315deg] border-r-2 border-b-2 border-white" />
+                    </button>
+                  </div>
+                  <div className="flex items-center">
+                    <button
+                      type="button"
+                      className="w-full rounded-[4px] px-4 py-4 text-left text-white text-[15px] font-bold flex justify-between items-center
+                      bg-gradient-to-r from-[#ff7a00] to-[#ffd000]                      "
+                    >
+                      <span>学校・教育機関向け</span>
+                      <span className="float-right mt-1 inline-block h-1.5 w-1.5 rotate-[315deg] border-r-2 border-b-2 border-white" />
+                    </button>
+                  </div>
+                </div>
+
+                {/* サブ */}
+                <div className="rounded-[8px] bg-[#f3f3f5] p-2 mb-6">
+                  <ul className="divide-y divide-black/10">
+                    <li>
+                      <Link
+                        href={"#"}
+                        className="block px-[10px] py-[15px] text-[13px] text-black hover:bg-white rounded-[6px]"
+                      >
+                        よくあるご質問
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href={"#"}
+                        className="block px-[10px] py-[15px] text-[13px] text-black hover:bg-white rounded-[6px]"
+                      >
+                        メルマガ登録
+                      </Link>
+                    </li>
+
+                    <li>
+                      <Link
+                        href={"#"}
+                        className="block px-[10px] py-[15px] text-[13px] text-black hover:bg-white rounded-[6px]"
+                      >
+                        店舗一覧
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href={"#"}
+                        className="block px-[10px] py-[15px] text-[13px] text-black hover:bg-white rounded-[6px] flex justify-between items-center"
+                      >
+                        <span>オンライン商談</span>
+                        <Image
+                          src="/img/Header4000_Icon_5.svg"
+                          alt=""
+                          width={17}
+                          height={17}
+                          className=""
+                        />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href={"#"}
+                        className="block px-[10px] py-[15px] text-[13px] text-black hover:bg-white rounded-[6px] flex justify-between items-center"
+                      >
+                        <span>個人旅行はこちら</span>
+                        <Image
+                          src="/img/Header4000_Icon_5.svg"
+                          alt=""
+                          width={17}
+                          height={17}
+                          className=""
+                        />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href={"#"}
+                        className="block px-[10px] py-[15px] text-[13px] text-black hover:bg-white rounded-[6px] flex justify-between items-center"
+                      >
+                        <span>For overseas customers</span>
+                        <Image
+                          src="/img/Header4000_Icon_5.svg"
+                          alt=""
+                          width={17}
+                          height={17}
+                          className=""
+                        />
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </aside>
         </div>
       </div>
     </>
