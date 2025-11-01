@@ -1,6 +1,5 @@
 "use client";
 
-import { section } from "framer-motion/client";
 import Image from "next/image";
 import { useEffect } from "react";
 
@@ -48,7 +47,7 @@ export default function Hero4000() {
           "
         >
           {/* 背景画像（PC） */}
-          <div className="hidden md:block relative w-full h-[58vw] h-[690px]">
+          <div className="hidden md:block relative w-full h-[58vw] max-h-[690px]">
             <Image
               src="/img/Hero4000_Background_1.jpg"
               alt=""
