@@ -30,7 +30,7 @@ export default function Hero4000() {
           md:portrait:max-h-[690px]
           bg-gradient-to-br from-[#001c7b] via-[#005ac8] to-[#00a7e1]
           hidden
-          lg:block
+          md:block
         `}
       >
         {/* マスク*/}
@@ -40,10 +40,15 @@ export default function Hero4000() {
             [mask-repeat:no-repeat] [mask-position:100%_0%] [mask-size:cover]
             md:[mask-image:url('/img/Hero4000_BackgroundMask_1.svg')]
             max-md:[mask-image:url('/img/Hero4000_BackgroundMask_1.svg')]
+            md:[mask-size:cover] md:[-webkit-mask-size:cover]
+            md:[mask-position:right_top] md:[-webkit-mask-position:right_top]
+            lg:[mask-size:cover] lg:[-webkit-mask-size:cover]
+            lg:[mask-position:100%_0%] lg:[-webkit-mask-position:100%_0%]
+            h-full
           "
         >
           {/* 背景画像（PC） */}
-          <div className="hidden md:block relative w-full h-[58vw] max-h-[690px]">
+          <div className="hidden md:block relative w-full h-[58vw] h-[690px]">
             <Image
               src="/img/Hero4000_Background_1.jpg"
               alt=""
@@ -71,15 +76,16 @@ export default function Hero4000() {
         <div className="absolute inset-0">
           <div className="mx-auto max-w-[1200px] h-full px-3 md:px-8">
             <div
-              className="absolute bottom-[18%] md:bottom-[74px] text-white
-              md:left-[100px]
+              className="absolute bottom-[18%] md:bottom-[80px] lg:bottom-[74px] text-white
+              lg:left-[100px] md:left-[20px]
               max-md:left-5 max-md:right-5"
             >
               <h1
                 className="
                   font-extrabold 
                   text-[40px] 
-                  md:text-[78px] 
+                  md:text-[64px]
+                  lg:text-[78px] 
                   -skew-x-[12deg]
                   [font-feature-settings:'palt']
                 "
@@ -137,7 +143,7 @@ export default function Hero4000() {
 
       <div
         aria-label="メインビジュアル（SP）"
-        className="block lg:hidden w-full overflow-x-clip"
+        className="block md:hidden w-full overflow-x-clip"
       >
         <div
           className="

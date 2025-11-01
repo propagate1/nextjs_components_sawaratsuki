@@ -308,7 +308,7 @@ export default function Header4000() {
         {/* モバイルメニュー（ドロワー） */}
         <div
           ref={mobileBarRef}
-          className="md:hidden flex items-center gap-4 w-full justify-between bg-gradient-to-r from-[#001c7b] via-[#005ac8] to-[#00a7e1] z-[1400] h-[67px]"
+          className="lg:hidden flex items-center gap-4 w-full justify-between bg-gradient-to-r from-[#001c7b] via-[#005ac8] to-[#00a7e1] z-[1400] h-[67px]"
         >
           <Link href="/" className="shrink-0 flex items-center">
             <Image
