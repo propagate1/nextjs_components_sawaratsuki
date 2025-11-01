@@ -1,5 +1,6 @@
 "use client";
 
+import { section } from "framer-motion/client";
 import Image from "next/image";
 import { useEffect } from "react";
 
@@ -70,7 +71,7 @@ export default function Hero4000() {
         <div className="absolute inset-0">
           <div className="mx-auto max-w-[1200px] h-full px-3 md:px-8">
             <div
-              className="absolute bottom-[18%] md:bottom-[80px] text-white
+              className="absolute bottom-[18%] md:bottom-[74px] text-white
               md:left-[100px]
               max-md:left-5 max-md:right-5"
             >
@@ -87,7 +88,7 @@ export default function Hero4000() {
               </h1>
 
               <p
-className="text-[15px] md:text-[14px] text-white/95 mt-[30px] font-semibold -skew-x-[12deg] ml-[15px]"
+                className="text-[15px] pb-1 md:text-[14px] text-white/95 mt-[30px] font-b -skew-x-[12deg] ml-[60px]"
               >
                 企業・団体のお客様の様々な課題やニーズに対し、
                 <br className="hidden md:block" />
@@ -106,9 +107,11 @@ className="text-[15px] md:text-[14px] text-white/95 mt-[30px] font-semibold -ske
                     tracking-[0.1em]
                     hover:opacity-95 transition
                     shadow-[0_1px_2px_rgba(0,0,0,.12)]
+                    flex items-center justify-between
                   "
                 >
                   資料請求する
+                  <span className="relative ml-4 right-[-35px] inline-block h-2 w-2 rotate-[315deg] border-r-2 border-b-2 border-[#CC0000]" />
                 </a>
                 <a
                   href="#"
@@ -120,9 +123,11 @@ className="text-[15px] md:text-[14px] text-white/95 mt-[30px] font-semibold -ske
                     text-[14px] font-semibold
                     hover:opacity-90 transition
                     shadow-[0_1px_2px_rgba(0,0,0,.12)]
+                    flex items-center justify-between
                   "
                 >
                   まずは相談する
+                  <span className="relative ml-4 right-[-28px] inline-block h-2 w-2 rotate-[315deg] border-r-2 border-b-2 border-current" />
                 </a>
               </div>
             </div>
@@ -163,7 +168,7 @@ className="text-[15px] md:text-[14px] text-white/95 mt-[30px] font-semibold -ske
           {/* テキスト */}
           <div className="pointer-events-none absolute inset-0">
             <div className="mx-auto h-full">
-              <div className="absolute left-[30px] right-5 bottom-[-22px] text-white">
+              <div className="absolute left-[30px] right-5 bottom-[-20px] text-white">
                 {/* 見出し */}
                 <h1
                   className="
@@ -185,7 +190,7 @@ className="text-[15px] md:text-[14px] text-white/95 mt-[30px] font-semibold -ske
                 "
                 >
                   企業・団体のお客様の様々な課題やニーズに対し、
-                  
+
                   JTBだからこそ提供できるサービスについてご紹介します。
                 </p>
 

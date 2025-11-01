@@ -37,7 +37,7 @@ export default function Header4000() {
                  before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r
                  before:from-[#001c7b] before:via-[#005ac8] before:to-[#00a7e1]
                  before:opacity-0 before:transition-opacity before:duration-300 hover:before:opacity-100
-                 before:pointer-events-none"
+                 before:pointer-events-none "
         >
           {" "}
           <Link href="/" className="shrink-0 flex items-center z-[100]">
@@ -50,7 +50,7 @@ export default function Header4000() {
               className="select-none h-auto w-full ml-7"
             />
           </Link>
-          <div>
+          <div className="w-full">
             <div className=" flex justify-end">
               <div className=" flex items-center gap-4 justify-between">
                 {/* 上段（PC） */}
@@ -58,7 +58,7 @@ export default function Header4000() {
                   <li>
                     <Link
                       href={"#"}
-                      className="text-[12px] text-black bg-white
+                      className="text-[12px] text-[#0c2f86] bg-white
                                border border-white rounded-full px-[13px] py-[4px] leading-none
                                backdrop-blur-[1px]"
                     >
@@ -192,8 +192,8 @@ export default function Header4000() {
               <div className="mx-auto w-full px-4 ">
                 <div className="my-3 flex items-center justify-end">
                   <nav className="hidden lg:flex">
-                    <ul className="flex items-center gap-10 text-white">
-                      <li>
+                    <ul className="flex items-center text-white">
+                      <li className="mr-[25px]">
                         <Link
                           href={"#"}
                           className="relative py-2 text-[16px] 
@@ -204,7 +204,7 @@ export default function Header4000() {
                           JTBだからできること
                         </Link>
                       </li>
-                      <li>
+                      <li className="mr-[25px]">
                         <Link
                           href={"#"}
                           className="relative py-2 text-[16px] 
@@ -215,7 +215,7 @@ export default function Header4000() {
                           サービス
                         </Link>
                       </li>
-                      <li>
+                      <li className="mr-[25px]">
                         <Link
                           href={"#"}
                           className="relative py-2 text-[16px] 
@@ -226,7 +226,7 @@ export default function Header4000() {
                           事例
                         </Link>
                       </li>
-                      <li>
+                      <li className="mr-[25px]">
                         <Link
                           href={"#"}
                           className="relative py-2 text-[16px] 
@@ -237,7 +237,7 @@ export default function Header4000() {
                           イベント・セミナー
                         </Link>
                       </li>
-                      <li>
+                      <li className="mr-[25px]">
                         <Link
                           href={"#"}
                           className="relative py-2 text-[16px] 
