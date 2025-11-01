@@ -91,7 +91,7 @@ export default function Header4000() {
                   </li>
                 </ul>
                 <ul className="flex items-center ml-auto">
-                  <li className={`${"mr-[20px]"}`}>
+                  <li className="mr-[20px]">
                     <Link
                       href={"#"}
                       className="relative inline-block text-[12px] text-white hover:text-white transition
@@ -105,7 +105,7 @@ export default function Header4000() {
                       よくあるご質問
                     </Link>
                   </li>
-                  <li className={`${"mr-[20px]"}`}>
+                  <li className="mr-[20px]">
                     <Link
                       href={"#"}
                       className="relative inline-block text-[12px] text-white hover:text-white transition
@@ -134,7 +134,7 @@ export default function Header4000() {
                     </Link>
                   </li>
                   <li
-                    className={`${"before:content-[''] before:inline-block before:w-[1px] before:h-[12px] before:bg-white before:mr-3 mx-[16px]"}`}
+                    className="before:content-[''] before:inline-block before:w-[1px] before:h-[12px] before:bg-white before:mr-3 mx-[16px]"
                   >
                     <Link
                       href="#"
@@ -146,7 +146,7 @@ export default function Header4000() {
                       after:scale-x-0 after:origin-right
                       hover:after:origin-left hover:after:scale-x-100"
                     >
-                      <span className="flex middle items-center">
+                      <span className="flex items-center">
                         個人旅行はこちら
                         <Image
                           src="/img/Header4000_Icon_1.svg"

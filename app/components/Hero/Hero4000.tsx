@@ -79,7 +79,7 @@ export default function Hero4000() {
                   font-extrabold 
                   text-[40px] 
                   md:text-[78px] 
-                  transform-[skewX(-12deg)]
+                  -skew-x-[12deg]
                   [font-feature-settings:'palt']
                 "
               >
@@ -87,8 +87,7 @@ export default function Hero4000() {
               </h1>
 
               <p
-                className="text-[15px] md:text-[14px] text-white/95 mt-[30px] font-semibold -skew-x-[12deg] ml-[15px] 
-"
+className="text-[15px] md:text-[14px] text-white/95 mt-[30px] font-semibold -skew-x-[12deg] ml-[15px]"
               >
                 企業・団体のお客様の様々な課題やニーズに対し、
                 <br className="hidden md:block" />
