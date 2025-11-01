@@ -1,10 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="108.181" height="150.031" viewBox="0 0 2510 3481">
+<svg xmlns="http://www.w3.org/2000/svg" width="451" height="625" viewBox="0 0 451 625">
   <defs>
     <style>
       .cls-1 {
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-width: 1px;
+        stroke-dasharray: 1.5 1.2;
         fill-rule: evenodd;
       }
     </style>
   </defs>
-  <path id="シェイプ_1" data-name="シェイプ 1" class="cls-1" d="M-444,386c867.665-266.4,1606.6-116.8,1966,56,0,0,289.57,180.83,436,418,132.91,215.27,124,489,124,489s-5.66,299.88-128,508c-133.2,226.6-384,363-384,363s164.75,158.23,244,338c84.57,191.84,60,506,60,506s-25.92,166.68-131,368c-89.7,171.84-237,283-237,283l-2098,88Z"/>
+  <path id="シェイプ_1" data-name="シェイプ 1" class="cls-1" d="M-9,53S319.57-13.331,370,210c28,124-87,189-87,189s64,48,55,144-49,118-49,118L-72,682Z"/>
 </svg>

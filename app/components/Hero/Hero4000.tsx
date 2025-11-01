@@ -201,7 +201,7 @@ export default function Hero4000() {
                 </p>
 
                 {/* CTA */}
-                <div className="pointer-events-auto mt-4 grid grid-cols-2 gap-3 tracking-[0.1em]">
+                <div className="pointer-events-auto mt-4 grid grid-cols-2 gap-3 tracking-[0.1em] ml-[-7px] md:ml-0">
                   <a
                     href="#"
                     className="
@@ -210,7 +210,8 @@ export default function Hero4000() {
                     pl-[28px]
                     pr-[12px]
                     py-[21px]
-                    w-[172px]
+                    md:w-[172px]
+                    w-[160px]
                     shadow-[0_1px_2px_rgba(0,0,0,.12)]
                     active:translate-y-[1px] transition
                   "
@@ -227,7 +228,9 @@ export default function Hero4000() {
                     pl-[28px]
                     pr-[12px]
                     py-[21px]
-                    w-[172px]
+                    
+                    md:w-[172px]
+                    w-[160px]
                     shadow-[0_1px_2px_rgba(0,0,0,.12)]
                     active:translate-y-[1px] transition
                   "
