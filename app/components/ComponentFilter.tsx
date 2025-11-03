@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import dynamic from "next/dynamic";
 
 type ComponentItem = {
   id: string;
@@ -160,8 +159,8 @@ export default function ComponentFilter() {
     
     try {
       // Dynamically import the component
-      const module = await import(`./${componentItem.category}/${fileName}`);
-      const LoadedComponent = module.default;
+      const importedModule = await import(`./${componentItem.category}/${fileName}`);
+      const LoadedComponent = importedModule.default;
       
       // Update the component in state
       setAllComponents(prev => 

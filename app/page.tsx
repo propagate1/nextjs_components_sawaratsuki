@@ -1,8 +1,12 @@
-import ComponentFilter from "./components/ComponentFilter";
-import BlackSpace from "./components/BlackSpace";
+// app/page.tsx
+import Header4000 from "./components/Header/Header4000";
+import Hero4000 from "./components/Hero/Hero4000";
 
-export default function Home() {
-  return
-  <BlackSpace />
-  ;
+export default function Page() {
+  return (
+    <main className="min-h-screen">
+      <Header4000 />
+      <Hero4000 />
+    </main>
+  );
 }

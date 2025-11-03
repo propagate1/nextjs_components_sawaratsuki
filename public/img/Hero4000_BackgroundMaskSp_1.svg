@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="451" height="625" viewBox="0 0 451 625">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-width: 1px;
+        stroke-dasharray: 1.5 1.2;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="シェイプ_1" data-name="シェイプ 1" class="cls-1" d="M-9,53S319.57-13.331,370,210c28,124-87,189-87,189s64,48,55,144-49,118-49,118L-72,682Z"/>
+</svg>
