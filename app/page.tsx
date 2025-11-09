@@ -1,12 +1,12 @@
 // app/page.tsx
-import Header4005 from "./components/Header/Header4005";
-import Hero4005 from "./components/Hero/Hero4005";
+import Header4006 from "./components/Header/Header4006";
+import Hero4006 from "./components/Hero/Hero4006";
 
 export default function Page() {
   return (
     <main className="min-h-screen">
-      <Header4005 />
-      <Hero4005 />
+      <Header4006 />
+      <Hero4006 />
     </main>
   );
 }
