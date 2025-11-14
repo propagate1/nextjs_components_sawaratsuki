@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState, useCallback } from "react";
+import Image from "next/image";
 
 // Product-Header.html を参照し、クラス単位の指定を Tailwind で移植。
 // PC 版レイアウトを忠実に再現するため、原 HTML 構造を保持しつつ display:none の要素も配置。
@@ -543,7 +544,7 @@ export default function Header4006() {
                                             <p className="m-0 text-[14px] text-[#cf004]">(※東京本社ではオフィス家具の販売は行っていません。)</p>
                                         </div>
                                         <Link href="/showroom/liveoffice.html" className="block no-underline text-[#333]">
-                                            <img
+                                            <Image
                                                 src="/common/img/thumb_smenu_showroom01.jpg"
                                                 alt="オフィス見学"
                                                 width={200}
@@ -565,7 +566,7 @@ export default function Header4006() {
                                             <p className="m-0 text-[14px] text-[#c400f]">(※個室ブースは東京本社で見学・体験できます。)</p>
                                         </div>
                                         <Link href="/showroom/" className="block no-underline text-[#333]">
-                                            <img
+                                            <Image
                                                 src="/common/img/thumb_smenu_showroom02.jpg"
                                                 alt="ショールーム"
                                                 width={200}
