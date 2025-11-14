@@ -1,0 +1,23 @@
+<!-- filepath: public/img/hero-pattern-b.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="228" height="570" viewBox="0 0 228 570" fill="none">
+  <!-- 上部ブロック -->
+  <rect x="0" y="0" width="114" height="114" fill="#FFE1DA"/>
+  <polygon points="114,0 114,114 0,114" fill="#E4DEFF"/>
+
+  <!-- 2段目（中央にアクセント三角） -->
+  <rect x="0" y="114" width="114" height="114" fill="#E4DEFF"/>
+  <polygon points="114,228 114,114 0,228" fill="#FFE1DA"/>
+
+  <!-- 3段目（右側に正方形） -->
+  <rect x="114" y="228" width="114" height="114" fill="#E4DEFF"/>
+  <polygon points="114,228 228,342 114,342" fill="#FFE1DA"/>
+
+  <!-- 4段目（左右に分割） -->
+  <rect x="0" y="342" width="114" height="114" fill="#FFE1DA"/>
+  <polygon points="114,456 228,456 228,342" fill="#E4DEFF"/>
+
+  <!-- 5段目（下部アクセント） -->
+  <rect x="114" y="456" width="114" height="114" fill="#FFE1DA"/>
+  <polygon points="0,570 114,456 114,570" fill="#E4DEFF"/>
+  <!-- 白地は未描画＝透過 -->
+</svg>
