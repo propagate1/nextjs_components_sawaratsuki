@@ -1,0 +1,16 @@
+<!-- filepath: public/img/hero-pattern-a.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="570" height="228" viewBox="0 0 570 228" fill="none">
+  <!-- 上段 右側 -->
+  <rect x="456" y="0" width="114" height="114" fill="#E4DEFF"/>
+  <!-- 上段 中央（対角三角） -->
+  <polygon points="342,0 456,0 456,114" fill="#FFE1DA"/>
+  <!-- 下段 中央（正方形） -->
+  <rect x="228" y="114" width="114" height="114" fill="#E4DEFF"/>
+  <!-- 下段 左から2番目（対角三角） -->
+  <polygon points="114,114 228,114 228,228" fill="#FFE1DA"/>
+  <!-- 下段 右端（正方形） -->
+  <rect x="456" y="114" width="114" height="114" fill="#FFE1DA"/>
+  <!-- 左下のアクセント三角（透過と組み合わせるレイアウト用） -->
+  <polygon points="0,228 114,114 114,228" fill="#E4DEFF"/>
+  <!-- それ以外の白地は描画しない＝透過 -->
+</svg>
