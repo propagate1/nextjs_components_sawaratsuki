@@ -1,9 +1,9 @@
 // app/page.tsx
-import FAQ4009 from "./components/FAQ/FAQ4009";
+import Service4010 from "./components/Service/Service4010";
 export default function Page() {
   return (
     <main className="min-h-screen">
-      <FAQ4009 />
+      <Service4010 />
     </main>
   );
 }
