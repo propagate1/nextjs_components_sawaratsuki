@@ -1,10 +1,9 @@
-import Hero4013 from "./components/Hero/Hero4013";
-
+import Features4014 from "./components/Features/Features4014";
 // app/page.tsx
 export default function Page() {
   return (
     <main className="min-h-screen">
-      <Hero4013 />
+      <Features4014 />
     </main>
   );
 }
