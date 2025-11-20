@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
-import { Noto_Sans_JP } from "next/font/google";
+import { Noto_Sans_JP, Noto_Serif_JP } from "next/font/google";
 import "./globals.css";
 
 const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
   variable: "--font-noto-sans-jp",
+  weight: ["400", "700"],
+});
+
+const notoSerifJP = Noto_Serif_JP({
+  subsets: ["latin"],
+  variable: "--font-noto-serif-jp",
+  weight: ["400", "500", "600", "700"],
 });
 
 
@@ -21,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body
-        className={notoSansJP.className}
+        className={`${notoSansJP.variable} ${notoSerifJP.variable}`}
       >
         {children}
       </body>
