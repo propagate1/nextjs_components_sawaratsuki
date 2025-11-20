@@ -1,10 +1,10 @@
 // app/page.tsx
-import Achievement4002 from "./components/Achievement/Achievement4002";
+import Price4003 from "./components/Price/Price4003";
 
 export default function Page() {
   return (
     <main className="min-h-screen">
-      <Achievement4002 />
+      <Price4003 />
     </main>
   );
 }
