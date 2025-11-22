@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Hero4008: React.FC = () => {
     return (
-        <section id="top" className="w-full bg-white pt-[48px] pb-0 font-['Noto_Sans_JP',sans-serif]">
+        <section id="top" className="w-full bg-white pt-[48px] pb-0 font-['Noto_Sans_JP',sans-serif] overflow-x-hidden">
             <div className="inner mx-auto max-w-[1200px] px-5 md:px-6 relative">
                 {/* Hero Content */}
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between md:gap-12">
@@ -43,7 +43,8 @@ const Hero4008: React.FC = () => {
                     </div>
 
                     {/* Right Column - Image Area */}
-                    <div className="imagearea w-full md:w-[50%] md:max-w-[468px] h-auto relative mt-10 md:mt-0 mb-10 md:mb-0 mx-auto md:mx-0 flex items-center justify-center">
+                    <div className="imagearea w-full md:w-[50%] md:max-w-[80%] h-auto relative mt-10 md:mt-0 
+                    mb-10 md:mb-0 mx-auto md:mx-0 flex items-center justify-center">
                         <Image
                             src="/img/Hero4008_Background_1.png"
                             alt="invox電子帳簿保存のイラスト"
@@ -56,39 +57,76 @@ const Hero4008: React.FC = () => {
                 </div>
 
                 {/* Statistics Section - 下部に配置 */}
-                <div className="w-full mt-8 md:mt-12">
-                    <ul className="gekkeikan2 flex flex-wrap items-center justify-center gap-4 md:gap-6 list-none p-0 m-0 mb-4">
-                        <li className="w-[178px] md:w-[188px] h-[92px]">
+                <div className="mt-4 md:mt-6">
+                    {/* モバイル用：上2つ、下1つ */}
+                    <div className="md:hidden flex flex-col items-center gap-3">
+                        {/* 上段：2つ横並び */}
+                        <ul className="gekkeikan2 flex items-center justify-center gap-3 list-none p-0 m-0">
+                            <li className="w-[150px] h-auto flex-shrink-0">
+                                <Image
+                                    src="/img/Hero4008_Stats_1.png"
+                                    alt="シリーズ累計30,000社以上が利用 2024年11月時点"
+                                    width={1024}
+                                    height={1024}
+                                    className="w-full h-auto object-contain"
+                                />
+                            </li>
+                            <li className="w-[140px] h-auto flex-shrink-0">
+                                <Image
+                                    src="/img/Hero4008_Stats_2.png"
+                                    alt="継続率 99.8%"
+                                    width={1024}
+                                    height={1024}
+                                    className="w-full h-auto object-contain"
+                                />
+                            </li>
+                        </ul>
+                        {/* 下段：1つ中央 */}
+                        <ul className="gekkeikan2 flex items-center justify-center list-none p-0 m-0">
+                            <li className="w-[140px] h-auto flex-shrink-0">
+                                <Image
+                                    src="/img/Hero4008_Stats_3.png"
+                                    alt="満足度 95.4%"
+                                    width={1024}
+                                    height={1024}
+                                    className="w-full h-auto object-contain"
+                                />
+                            </li>
+                        </ul>
+                    </div>
+                    {/* デスクトップ用：3つ横並び */}
+                    <ul className="hidden md:flex items-center gap-4 list-none p-0 m-0">
+                        <li className="w-[180px] h-auto flex-shrink-0">
                             <Image
                                 src="/img/Hero4008_Stats_1.png"
                                 alt="シリーズ累計30,000社以上が利用 2024年11月時点"
-                                width={188}
-                                height={92}
-                                className="w-full h-auto"
+                                width={1024}
+                                height={1024}
+                                className="w-full h-auto object-contain"
                             />
                         </li>
-                        <li className="w-[156px] h-[92px]">
+                        <li className="w-[160px] h-auto flex-shrink-0">
                             <Image
                                 src="/img/Hero4008_Stats_2.png"
                                 alt="継続率 99.8%"
-                                width={156}
-                                height={92}
-                                className="w-full h-auto"
+                                width={1024}
+                                height={1024}
+                                className="w-full h-auto object-contain"
                             />
                         </li>
-                        <li className="w-[164px] md:w-[156px] h-[92px]">
+                        <li className="w-[160px] h-auto flex-shrink-0">
                             <Image
                                 src="/img/Hero4008_Stats_3.png"
                                 alt="満足度 95.4%"
-                                width={156}
-                                height={92}
-                                className="w-full h-auto"
+                                width={1024}
+                                height={1024}
+                                className="w-full h-auto object-contain"
                             />
                         </li>
                     </ul>
 
                     {/* Footnotes */}
-                    <p className="caption text-[12px] leading-[20px] text-[rgba(71,66,65,0.8)] mt-4 text-left">
+                    <p className="caption text-[12px] leading-[20px] text-[rgba(71,66,65,0.8)] mt-4 md:mt-0 text-left">
                         ※1 継続率 <strong>99.8％</strong>：2024年1月〜2024年12月における有料プラン登録ユーザーの月次解約率の中央値 <br />
                         ※2 満足度 <strong>95.4％</strong>：有料プラン登録ユーザーを対象としたインターネット調査（2024年12月13日〜27日、有効回答数：548社）
                     </p>
