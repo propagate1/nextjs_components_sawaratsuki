@@ -11,7 +11,7 @@ export default function Hero4006() {
         <section
             aria-label="MAXHUB ヒーロー"
             className="relative z-0 text-left
-             text-[62.5%]
+        text-[62.5%]
         pt-[90px] pb-[65%]
         bg-[url('/img/Hero4006_Background_1.png')] bg-no-repeat bg-[length:100%_auto] bg-[position:0_80px]
         md:pt-[90px] md:mb-[65%]
@@ -22,7 +22,7 @@ export default function Hero4006() {
 
             <div className="relative mx-auto px-[5%] lg:px-0 w-full lg:w-[1100px] lg:pt-[125px]">
                 {/* パンくず */}
-                <ol className="mb-5 lg:mb-[70px] text-[1.0rem] leading-none text-[#666] list-none p-0">
+                <ol className="mb-5 lg:mb-[70px] text-[1.0em] leading-none text-[#666] list-none p-0">
                     <li className="float-left pr-[5px] before:content-[''] first:before:content-['']">
                         <Link href="/" className="text-[#333]">
                             オフィスデザイン・オフィス移転TOP
@@ -52,7 +52,7 @@ export default function Hero4006() {
                         {/* キャッチ */}
                         <p
                             className="catch relative z-0 inline-block w-[240px] lg:w-[308px] text-center text-[#AC9E4C]
-                text-[2.0rem] lg:text-[2.6rem] leading-[1.5] mb-[15px] lg:mb-[25px]
+                text-[2.0em] lg:text-[2.6em] leading-[1.5] mb-[15px] lg:mb-[25px]
                 px-[5px] pt-[5px] pb-[2px] lg:pt-0"
                         >
                             <span
@@ -66,13 +66,13 @@ export default function Hero4006() {
 
                         {/* サブテキスト */}
                         <p className="sub_txt inline-block text-[#222] font-bold tracking-[0.05em]
-              text-[2.0rem] lg:text-[3.6rem] leading-[1.6] pb-[10px] lg:pb-[20px]">
+              text-[2.0em] lg:text-[3.6em] leading-[1.6] pb-[10px] lg:pb-[20px]">
                             全国9拠点のショールームで
                             <br />
                             無料デモ体験受付中！
                         </p>
 
-                        <p className="sub_txt_s font-medium text-[1.4rem] lg:text-[1.6rem] leading-[1.8] mb-5 lg:mb-[30px]">
+                        <p className="sub_txt_s font-medium text-[1.4em] lg:text-[1.6em] leading-[1.8] mb-5 lg:mb-[30px]">
                             実際に見て体験した上で検討する事が可能なので
                             <br className="hidden lg:inline" />
                             お気軽にご来場ください。
@@ -84,7 +84,7 @@ export default function Hero4006() {
                                 href="#contact-mail"
                                 className="inline-block text-white font-bold text-center leading-[1.6]
                   rounded-[10px] shadow-[0_15px_30px_rgba(0,0,0,0.18)]
-                  text-[1.8rem] lg:text-[2.5rem]
+                  text-[1.8em] lg:text-[2.5em]
                   py-[20px] pl-[40px] lg:pl-[90px] lg:pr-[50px]
                   w-full lg:w-auto
                   bg-[url('/img/maxhub/ico_mail.png'),linear-gradient(90deg,#716A3E_0%,#3C3609_100%)]
