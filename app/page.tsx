@@ -1,10 +1,11 @@
-import MiddleCTA4012 from "./components/CTA/MiddleCTA4012";
+// app/page.tsx
+import Message4001 from "./components/Message/Message4001";
 
 // app/page.tsx
 export default function Page() {
   return (
     <main className="min-h-screen">
-      <MiddleCTA4012 />
+      <Message4001 />
     </main>
   );
 }
