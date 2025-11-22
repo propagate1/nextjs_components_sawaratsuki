@@ -21,46 +21,46 @@ export default function Hero4005() {
 
                     {/* 右側テキストグラデーション帯 */}
                     <div className="">
-                        <div className="absolute top-0 right-4 w-[35rem] h-[calc(100vh-5rem)] ">
-                            <div className="pt-[5%] pl-[12%]">
+                        <div className="absolute top-0 left-0 right-0 px-4 h-[calc(100vh-5rem)] flex flex-col justify-center overflow-y-auto">
+                            <div className="pt-4 pb-8">
                                 {/* 見出し - 上ライン（ピンクの下線） */}
-                                <div className="mb-2 relative inline-block">
-                                    <p className="relative z-[2] text-[24px] font-bold tracking-wider text-black">
+                                <div className="mb-3 relative inline-block">
+                                    <p className="relative z-[2] text-[18px] sm:text-[20px] font-bold tracking-wider text-black">
                                         英会話は<br />より低価格、高品質へ
                                     </p>
                                     <div className="absolute bottom-1 left-0 z-[1] w-full h-1 bg-[#ffe1da]" />
                                 </div>
                                 {/* タイトル */}
-                                <div className="mb-10">
-                                    <h1 className="text-[66px] font-bold tracking-wider leading-tight">
+                                <div className="mb-6">
+                                    <h1 className="text-[36px] sm:text-[42px] font-bold tracking-wider leading-tight">
                                         Weblio英会話
                                     </h1>
                                 </div>
                                 {/* 説明文 */}
-                                <div className="mb-20">
-                                    <p className="text-[12px] leading-normal text-[#1b161c]">
+                                <div className="mb-8">
+                                    <p className="text-[11px] sm:text-[12px] leading-relaxed text-[#1b161c]">
                                         毎日高品質なオンライン英会話ができる<br />
                                         新しい自分のためのオンライン英会話
                                     </p>
                                 </div>
                                 {/* CTAボタン（左黒 + 右オレンジ） */}
-                                <Link href="/register" className="group inline-block">
-                                    <div className="w-[21.5rem] h-[5rem] flex">
-                                        <div className="flex-1 flex items-center pl-5 bg-[#1b161c] transition-colors group-hover:bg-[#686669]">
+                                <Link href="/register" className="group inline-block w-full max-w-[21.5rem]">
+                                    <div className="w-full h-[4rem] sm:h-[5rem] flex">
+                                        <div className="flex-1 flex items-center pl-4 sm:pl-5 bg-[#1b161c] transition-colors group-hover:bg-[#686669]">
                                             <div>
-                                                <p className="text-[10px] font-bold tracking-wider leading-none text-white/40 ">初回限定</p>
-                                                <p className="text-[12px] font-bold tracking-wider leading-none text-white">無料体験レッスン</p>
+                                                <p className="text-[9px] sm:text-[10px] font-bold tracking-wider leading-none text-white/40 ">初回限定</p>
+                                                <p className="text-[11px] sm:text-[12px] font-bold tracking-wider leading-none text-white">無料体験レッスン</p>
                                             </div>
                                         </div>
-                                        <div className="w-[5rem] bg-[#ff6e4a] flex items-center justify-center transition-colors group-hover:bg-[#f89279]">
+                                        <div className="w-[4rem] sm:w-[5rem] bg-[#ff6e4a] flex items-center justify-center transition-colors group-hover:bg-[#f89279]">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
-                                                width="30"
-                                                height="30"
+                                                width="24"
+                                                height="24"
                                                 viewBox="0 0 20 20"
                                                 fill="none"
                                                 aria-hidden="true"
-                                                className="block"
+                                                className="block sm:w-[30px] sm:h-[30px]"
                                             >
                                                 <path
                                                     d="M11.25 4.25a.75.75 0 0 0-1.06 1.06L13.19 8.31H3.5a.75.75 0 0 0 0 1.5h9.69l-2.99 2.99a.75.75 0 1 0 1.06 1.06l4.5-4.5a.75.75 0 0 0 0-1.06l-4.5-4.5Z"
