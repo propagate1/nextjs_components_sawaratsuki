@@ -59,7 +59,7 @@ export default function Message4001() {
           </h2>
         </div>
 
-        <div className="mt-0 flex items-center gap-6 rounded-[32px] bg-white/95 p-6 flex-row sm:justify-center sm:gap-8 sm:p-6 md:gap-10 md:p-8 lg:gap-14 lg:pb-12">
+        <div className="mt-0 flex flex-col items-stretch gap-6 rounded-[32px] bg-white/95 p-6 sm:flex-row sm:items-center sm:justify-center sm:gap-8 sm:p-6 md:gap-10 md:p-8 lg:gap-14 lg:pb-12">
           <div className="w-full sm:w-1/2">
             <div className="relative aspect-[4/3] overflow-hidden rounded-[28px] ">
               <Image
