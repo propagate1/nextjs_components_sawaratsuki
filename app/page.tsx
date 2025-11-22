@@ -1,10 +1,10 @@
-import MiddleCTA4012 from "./components/CTA/MiddleCTA4012";
+import Product4014 from "./components/Products/Product4014";
 
 // app/page.tsx
 export default function Page() {
   return (
     <main className="min-h-screen">
-      <MiddleCTA4012 />
+      <Product4014 />
     </main>
   );
 }
