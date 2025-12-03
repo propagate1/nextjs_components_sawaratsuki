@@ -8,11 +8,11 @@ const Hero4008: React.FC = () => {
         <section id="top" className="w-full bg-white pt-[48px] pb-0 font-['Noto_Sans_JP',sans-serif] overflow-x-hidden">
             <div className="inner mx-auto max-w-[1200px] px-5 md:px-6 relative">
                 {/* Hero Content */}
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between md:gap-12">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between md:gap-12">
                     {/* Left Column - Text Content */}
-                    <div className="textarea w-full md:w-[50%] md:max-w-[500px] mb-8 md:mb-0">
+                    <div className="textarea w-full md:w-[50%] md:max-w-[500px] mb-8 md:mb-0 md:flex md:flex-col md:justify-center">
                         {/* Title */}
-                        <h1 className="catch text-[#474241] text-[32px] md:text-[36px] font-bold leading-[44px] md:leading-[56px] mb-10 md:mb-[24px] pt-0 md:pt-[64px] -mt-[10px] md:mt-0">
+                        <h1 className="catch text-[#474241] text-[32px] md:text-[36px] font-bold leading-[44px] md:leading-[56px] mb-10 md:mb-[24px] pt-0 md:pt-0 -mt-[10px] md:mt-0">
                             あらゆる<br className="md:hidden" />国税関係書類を<br />ぜ〜んぶ電子保存！
                         </h1>
 
@@ -50,7 +50,7 @@ const Hero4008: React.FC = () => {
                             alt="invox電子帳簿保存のイラスト"
                             width={468}
                             height={312}
-                            className="w-full h-auto"
+                            className="w-full h-auto pt-30"
                             priority
                         />
                     </div>
