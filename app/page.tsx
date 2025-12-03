@@ -1,11 +1,10 @@
-// app/page.tsx
-import Message4001 from "./components/Message/Message4001";
+import Product4014 from "./components/Products/Product4014";
 
 // app/page.tsx
 export default function Page() {
   return (
     <main className="min-h-screen">
-      <Message4001 />
+      <Product4014 />
     </main>
   );
 }
