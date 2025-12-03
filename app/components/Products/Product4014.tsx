@@ -11,7 +11,7 @@ export default function Product4014() {
                 <div className="relative w-full bg-gradient-to-br from-[#8B7C3A] via-[#6B5D2A] to-[#5A4E22]">
                     {/* 背景画像 - 左側 */}
                     <div
-                        className="absolute left-0 top-0 bottom-0 w-1/3 bg-contain bg-left bg-no-repeat opacity-30"
+                        className="absolute left-0 top-0 bottom-0 w-1/3 bg-contain bg-left bg-no-repeat opacity-30 z-0"
                         style={{ backgroundImage: "url('/img/Product4014_Background_1.png')" }}
                     ></div>
 
@@ -23,10 +23,10 @@ export default function Product4014() {
                     </div>
 
                     {/* コンテンツエリア - SPECの下 */}
-                    <div className="pt-20 md:pt-24 px-0">
+                    <div className="pt-20 md:pt-24 px-0 relative z-20">
                         {/* サブタイトル */}
-                        <div className="text-center mb-16">
-                            <h3 className="text-2xl md:text-4xl font-bold text-white tracking-wide">
+                        <div className="text-center mb-16 relative z-20">
+                            <h3 className="text-2xl md:text-4xl font-bold text-white tracking-wide z-1000">
                                 MAXHUB1台で、この機能をすべて搭載！
                             </h3>
                         </div>
