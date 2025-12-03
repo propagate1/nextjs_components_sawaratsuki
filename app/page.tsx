@@ -1,11 +1,11 @@
 // app/page.tsx
-import Message4001 from "./components/Message/Message4001";
-
-// app/page.tsx
+import Hero4008 from "./components/Hero/Hero4008";
+import Header4008 from "./components/Header/Header4008";
 export default function Page() {
   return (
     <main className="min-h-screen">
-      <Message4001 />
+      <Header4008 />
+      <Hero4008 />
     </main>
   );
 }

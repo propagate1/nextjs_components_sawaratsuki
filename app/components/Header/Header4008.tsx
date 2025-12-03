@@ -9,17 +9,17 @@ const Header4008: React.FC = () => {
     return (
         <>
             <header className="fixed top-0 left-0 right-0 w-full bg-white z-[999] h-[53px] font-['Noto_Sans_JP',sans-serif]">
-                <div className="relative mx-auto flex items-center justify-between h-[53px] max-w-[1440px] px-6">
+                <div className="relative mx-auto flex items-center justify-between h-[53px] max-w-[1440px] px-6 py-7">
                     {/* Logo */}
                     <h1 className="p-logo flex items-center pl-0 md:pl-6">
-                        <a href="https://invox.jp/storage/" className="flex items-center">
+                        <a href="https://invox.jp/storage/" className="flex items-center py-3">
                             <Image
                                 src="/img/Header4008_Logo_1.png"
                                 alt="クラウド文書管理システム invox電子帳簿保存"
-                                width={192}
-                                height={25}
+                                width={152}
+                                height={20}
                                 priority
-                                className="w-[192px] h-[24.8125px]"
+                                className="h-[80%]"
                             />
                         </a>
                     </h1>
