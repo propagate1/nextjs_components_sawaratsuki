@@ -9,16 +9,16 @@ const kosugiMaru = Kosugi_Maru({
 
 export default function Service4010() {
   return (
-    <section className={`py-16 px-4 bg-white ${kosugiMaru.className}`}>
+    <section className={`py-16 px-4 bg-white overflow-x-hidden ${kosugiMaru.className}`}>
       <div className="flex justify-center items-center">
-        <div className="scale-[0.6] sm:scale-[0.8] lg:scale-100 origin-center">
+        <div className="scale-[0.35] sm:scale-[0.5] md:scale-[0.7] lg:scale-100 origin-center">
           {/* メインカード */}
           <div className="relative bg-white rounded-2xl border-4 border-[#FFB84D] shadow-xl overflow-visible w-[980px]">
             {/* メインコンテンツ */}
             <div className="px-4 py-5 pb-4">
               {/* オレンジのヘッダーバッジ - 枠の中 */}
               <div className="flex justify-center mb-6">
-                <div className="bg-[#FFB84D] text-white px-18 py-1 rounded-full font-bold text-lg shadow-md">
+                <div className="bg-[#FFB84D] text-white px-[72px] py-1 rounded-full font-bold text-lg shadow-md">
                   ミライルは
                 </div>
               </div>
@@ -47,7 +47,7 @@ export default function Service4010() {
               </p>
 
               {/* クリーム色の背景エリア - その他徹底も含む */}
-              <div className="bg-[#FFF8E8] rounded-2xl p-8 pl-30 relative">
+              <div className="bg-[#FFF8E8] rounded-2xl p-8 pl-[120px] relative">
                 {/* 左側の円形バッジ - クリーム色の背景内 */}
                 <div className="absolute left-5 top-8 w-24 h-24 bg-[#7EC944] rounded-full flex items-center justify-center text-white font-bold text-center text-sm leading-tight shadow-lg z-10">
                   <div>
@@ -56,7 +56,7 @@ export default function Service4010() {
                 </div>
 
                 {/* チェックリスト */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-6 ml-5">
+                <div className="grid grid-cols-2 gap-5 mb-6 ml-5">
                   {/* 左列 */}
                   <div className="space-y-4">
                     <div className="flex items-center gap-3">
