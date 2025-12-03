@@ -353,10 +353,10 @@ export default function Header4006() {
                 >
                     <div className="inner mx-auto max-w-[1100px]">
                         {/* in_l */}
-                        <div className="in_l float-left w-[32%] max-w-[500px] px-[0] pl-[3.9%] pr-[3%] box-border">
-                            <p className="cat_tit m-0 mb-[10px] text-[2.4rem] font-bold w-full">
+                        <div className="in_l float-left w-[23%] max-w-[500px] px-[0] pl-[3.9%] pr-[0] box-border">
+                            <p className="cat_tit m-0 mb-[10px] text-[1.5rem] font-bold w-full">
                                 オフィスサービス
-                                <span className="block text-[1.4rem] text-[#d1322e]">SERVICE</span>
+                                <span className="block text-[1rem] text-[#d1322e]">SERVICE</span>
                             </p>
                             <p className="btn list m-0 mb-[10px]">
                                 <Link href="/service/" className="overimg block w-[80%] border border-[#333] bg-[#333] text-center text-white no-underline px-[10px] py-[5px]">
@@ -425,10 +425,10 @@ export default function Header4006() {
                 >
                     <div className="inner mx-auto max-w-[1100px]">
                         {/* in_l: 施工事例集 */}
-                        <div className="in_l float-left w-[18.1%] max-w-[275px] px-[0] pl-[3.9%] pr-[3%] box-border">
-                            <p className="cat_tit m-0 mb-[10px] text-[2.4rem] font-bold">
+                        <div className="in_l float-left w-[18.1%] max-w-[275px] px-[0] pl-[3.9%] pr-[0] box-border">
+                            <p className="cat_tit m-0 mb-[10px] text-[1.5rem] font-bold">
                                 施工事例集
-                                <span className="block text-[1.4rem] text-[#d1322e]">CASE</span>
+                                <span className="block text-[1rem] text-[#d1322e]">CASE</span>
                             </p>
                             <p className="btn list m-0 mb-[10px]">
                                 <Link href="/case/cate_all.html" className="overimg block w-[80%] border border-[#333] bg-[#333] text-center text-white no-underline px-[10px] py-[5px]"><span className="inline-block pr-[15px] bg-[url('/img/arw.png')] bg-no-repeat bg-[position:right_50%]">全ての施工事例</span></Link>
@@ -483,10 +483,10 @@ export default function Header4006() {
                     onMouseLeave={closeSub}
                 >
                     <div className="inner mx-auto max-w-[1100px]">
-                        <div className="in_l float-left w-[18.1%] max-w-[275px] px-[0] pl-[3.9%] pr-[3%] box-border">
-                            <p className="cat_tit m-0 mb-[10px] text-[2.4rem] font-bold">
+                        <div className="in_l float-left w-[18.1%] max-w-[275px] px-[0] pl-[3.9%] pr-[0] box-border">
+                            <p className="cat_tit m-0 mb-[10px] text-[1.5rem] font-bold">
                                 会社案内
-                                <span className="block text-[1.4rem] text-[#d1322e]">COMPANY</span>
+                                <span className="block text-[1rem] text-[#d1322e]">COMPANY</span>
                             </p>
                             <p className="btn list m-0 mb-[10px]">
                                 <Link href="/company/" className="overimg block w-[80%] border border-[#333] bg-[#333] text-center text-white no-underline px-[10px] py-[5px]">
