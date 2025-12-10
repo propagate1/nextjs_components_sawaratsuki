@@ -2,6 +2,20 @@
 
 import Link from "next/link";
 import { useEffect, useState, useCallback } from "react";
+import Image from "next/image";
+import { Noto_Sans_JP, WDXL_Lubrifont_JP_N } from "next/font/google";
+
+// Noto Sans JP for "The PLUS Group"
+const notoSansJP = Noto_Sans_JP({
+    weight: ["400", "700"],
+    subsets: ["latin"],
+});
+
+// WDXL Lubrifont JP N for "オフィスコム"
+const wdxlLubrifont = WDXL_Lubrifont_JP_N({
+    weight: "400",
+    subsets: ["latin"],
+});
 
 // Product-Header.html を参照し、クラス単位の指定を Tailwind で移植。
 // PC 版レイアウトを忠実に再現するため、原 HTML 構造を保持しつつ display:none の要素も配置。
@@ -53,8 +67,11 @@ export default function Header4006() {
             >
                 <div className="inner relative mx-auto flex items-stretch max-w-[1150px] justify-between bg-white h-[44px] lg:h-auto">
                     <p className="logo flex w-[202px] items-center justify-center px-[10px] lg:border-r lg:border-[#e2e2e2]">
-                        <Link href="/" className="block h-[42px] w-[141px] mt-[3px] mx-auto text-[#333] text-[18px] leading-[42px] text-center no-underline">
-                            オフィスコム
+                        <Link href="/" className="block w-[100px] md:w-[141px] mt-[3px] mx-auto text-[#333] text-[18px] leading-[42px] text-center no-underline">
+                            <span className={`block text-[20px] md:text-[25px] lg:text-[30px] font-bold text-[#E60012] leading-[1.2] ${wdxlLubrifont.className}`}>オフィスコム</span>
+                            <span className={`block font-[900] text-center text-[8px] lg:text-[10px] leading-[1.2] ${notoSansJP.className}`}>
+                                The PLUS Group
+                            </span>
                         </Link>
                     </p>
 
@@ -352,10 +369,10 @@ export default function Header4006() {
                 >
                     <div className="inner mx-auto max-w-[1100px]">
                         {/* in_l */}
-                        <div className="in_l float-left w-[32%] max-w-[500px] px-[0] pl-[3.9%] pr-[3%] box-border">
-                            <p className="cat_tit m-0 mb-[10px] text-[2.4rem] font-bold w-full">
+                        <div className="in_l float-left w-[23%] max-w-[500px] px-[0] pl-[3.9%] pr-[0] box-border">
+                            <p className="cat_tit m-0 mb-[10px] text-[1.5rem] font-bold w-full">
                                 オフィスサービス
-                                <span className="block text-[1.4rem] text-[#d1322e]">SERVICE</span>
+                                <span className="block text-[1rem] text-[#d1322e]">SERVICE</span>
                             </p>
                             <p className="btn list m-0 mb-[10px]">
                                 <Link href="/service/" className="overimg block w-[80%] border border-[#333] bg-[#333] text-center text-white no-underline px-[10px] py-[5px]">
@@ -424,10 +441,10 @@ export default function Header4006() {
                 >
                     <div className="inner mx-auto max-w-[1100px]">
                         {/* in_l: 施工事例集 */}
-                        <div className="in_l float-left w-[18.1%] max-w-[275px] px-[0] pl-[3.9%] pr-[3%] box-border">
-                            <p className="cat_tit m-0 mb-[10px] text-[2.4rem] font-bold">
+                        <div className="in_l float-left w-[18.1%] max-w-[275px] px-[0] pl-[3.9%] pr-[0] box-border">
+                            <p className="cat_tit m-0 mb-[10px] text-[1.5rem] font-bold">
                                 施工事例集
-                                <span className="block text-[1.4rem] text-[#d1322e]">CASE</span>
+                                <span className="block text-[1rem] text-[#d1322e]">CASE</span>
                             </p>
                             <p className="btn list m-0 mb-[10px]">
                                 <Link href="/case/cate_all.html" className="overimg block w-[80%] border border-[#333] bg-[#333] text-center text-white no-underline px-[10px] py-[5px]"><span className="inline-block pr-[15px] bg-[url('/img/arw.png')] bg-no-repeat bg-[position:right_50%]">全ての施工事例</span></Link>
@@ -482,10 +499,10 @@ export default function Header4006() {
                     onMouseLeave={closeSub}
                 >
                     <div className="inner mx-auto max-w-[1100px]">
-                        <div className="in_l float-left w-[18.1%] max-w-[275px] px-[0] pl-[3.9%] pr-[3%] box-border">
-                            <p className="cat_tit m-0 mb-[10px] text-[2.4rem] font-bold">
+                        <div className="in_l float-left w-[18.1%] max-w-[275px] px-[0] pl-[3.9%] pr-[0] box-border">
+                            <p className="cat_tit m-0 mb-[10px] text-[1.5rem] font-bold">
                                 会社案内
-                                <span className="block text-[1.4rem] text-[#d1322e]">COMPANY</span>
+                                <span className="block text-[1rem] text-[#d1322e]">COMPANY</span>
                             </p>
                             <p className="btn list m-0 mb-[10px]">
                                 <Link href="/company/" className="overimg block w-[80%] border border-[#333] bg-[#333] text-center text-white no-underline px-[10px] py-[5px]">
@@ -543,7 +560,7 @@ export default function Header4006() {
                                             <p className="m-0 text-[14px] text-[#cf004]">(※東京本社ではオフィス家具の販売は行っていません。)</p>
                                         </div>
                                         <Link href="/showroom/liveoffice.html" className="block no-underline text-[#333]">
-                                            <img
+                                            <Image
                                                 src="/common/img/thumb_smenu_showroom01.jpg"
                                                 alt="オフィス見学"
                                                 width={200}
@@ -565,7 +582,7 @@ export default function Header4006() {
                                             <p className="m-0 text-[14px] text-[#c400f]">(※個室ブースは東京本社で見学・体験できます。)</p>
                                         </div>
                                         <Link href="/showroom/" className="block no-underline text-[#333]">
-                                            <img
+                                            <Image
                                                 src="/common/img/thumb_smenu_showroom02.jpg"
                                                 alt="ショールーム"
                                                 width={200}
